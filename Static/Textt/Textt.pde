@@ -1,6 +1,7 @@
-String title = "Wahoo!";
+String title = "I'm sleepy.";
 float titleX, titleY, titleWidth, titleHeight;
 PFont titleFont;
+color purple=#2C08FF, resetDefaultInk=#FFFFFF;
 //
 //Display Geometry, Display orientation: landscape, portrait, or square
 size (500, 600); //fullScreen(); //displayWidth & displayHeight
@@ -19,10 +20,10 @@ titleFont = createFont("Harrington", 55); //Verify the font exists in Processing
 //Layout our text space and typographical features
 rect(titleX, titleY, titleWidth, titleHeight);
 //Drawing Text
-fill(); //Ink, hexidecimal copied from Color Selector
-textAlign(); //Align X&Y, see Processing.org / Reference
-//Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASEMENT ]
-textFont(); //Change the number until it fits
-text();
+fill(purple); //Ink, hexidecimal copied from Color Selector
+textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+//Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+textFont(titleFont, 50); //Change the number until it fits
+text(title, titleX, titleY, titleWidth, titleHeight);
 fill(resetDefaultInk);
 //End Program
